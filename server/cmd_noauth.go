@@ -5,9 +5,9 @@ import (
 	"errors"
 	"net"
 
-	"github.com/emersion/go-imap"
-	"github.com/emersion/go-imap/commands"
-	"github.com/emersion/go-imap/responses"
+	"github.com/MFAshby/go-imap"
+	"github.com/MFAshby/go-imap/commands"
+	"github.com/MFAshby/go-imap/responses"
 	"github.com/emersion/go-sasl"
 )
 
@@ -62,11 +62,7 @@ func (cmd *StartTLS) Upgrade(conn Conn) error {
 }
 
 func afterAuthStatus(conn Conn) error {
-	return ErrStatusResp(&imap.StatusResp{
-		Type:      imap.StatusRespOk,
-		Code:      imap.CodeCapability,
-		Arguments: imap.FormatStringList(conn.Capabilities()),
-	})
+	return ErrNoStatusResp()
 }
 
 func canAuth(conn Conn) bool {

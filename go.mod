@@ -1,4 +1,4 @@
-module github.com/emersion/go-imap
+module github.com/MFAshby/go-imap
 
 require (
 	github.com/emersion/go-message v0.9.1

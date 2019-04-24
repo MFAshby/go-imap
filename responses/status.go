@@ -3,8 +3,8 @@ package responses
 import (
 	"errors"
 
-	"github.com/emersion/go-imap"
-	"github.com/emersion/go-imap/utf7"
+	"github.com/MFAshby/go-imap"
+	"github.com/MFAshby/go-imap/utf7"
 )
 
 const statusName = "STATUS"
